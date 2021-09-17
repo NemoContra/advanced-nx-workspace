@@ -8,6 +8,7 @@ import { Routes } from '@angular/router';
 import { PassengerMf } from '../mf';
 import { BasketComponent } from './basket/basket.component';
 import { HomeComponent } from './home/home.component';
+import { CanDeactivateGuard } from './shared/deactivation/can-deactivate.guard';
 
 export const APP_ROUTES: Routes = [
   {
@@ -17,6 +18,7 @@ export const APP_ROUTES: Routes = [
   },
   {
     path: 'home',
+    canDeactivate: [CanDeactivateGuard],
     component: HomeComponent,
   },
   {

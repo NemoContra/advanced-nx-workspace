@@ -1,3 +1,4 @@
+import {FormsModule} from "@angular/forms";
 import { FlightCancellingModule } from './flight-booking/flight-cancelling/flight-cancelling.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -33,6 +34,7 @@ import { CustomLogFormatterService } from './shared/logging/custom-log-formatter
       enableDebug: true,
       logFormatterType: CustomLogFormatterService,
     }),
+    FormsModule,
   ],
   declarations: [
     AppComponent,

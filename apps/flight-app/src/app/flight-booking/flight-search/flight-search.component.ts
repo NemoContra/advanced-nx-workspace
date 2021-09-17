@@ -6,6 +6,7 @@ import { Store } from '@ngrx/store';
 import { take } from 'rxjs';
 import { flightsLoaded, updateFlight } from '../+state/flight-booking.actions';
 import { FlightBookingAppState } from '../+state/flight-booking.reducer';
+import { selectFlightsWithProps } from '../+state/flight-booking.selectors';
 
 @Component({
   selector: 'flight-search',
@@ -21,7 +22,7 @@ export class FlightSearchComponent {
     3: true,
     5: true,
   };
-  flights$ = this.store.select((s) => s.flightBooking.flights);
+  flights$ = this.store.select(selectFlightsWithProps({ blackList: [3] }));
 
   constructor(
     private store: Store<FlightBookingAppState>,

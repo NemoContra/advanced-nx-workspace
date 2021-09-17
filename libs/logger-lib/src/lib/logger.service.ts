@@ -13,6 +13,7 @@ export class LoggerService {
 
   debug(message: string): void {
     if (!this.config.enableDebug) return;
+    // eslint-disable-next-line no-restricted-syntax
     console.debug(this.logFormatter.format(message));
   }
 

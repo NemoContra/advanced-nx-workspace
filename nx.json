@@ -73,6 +73,9 @@
     "passenger": {
       "tags": ["domain:passenger", "type:app"]
     },
+    "passenger-api": {
+      "tags": []
+    },
     "passenger-domain": {
       "tags": ["domain:passenger", "type:domain-logic"]
     },

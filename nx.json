@@ -107,6 +107,9 @@
     },
     "passenger-feature-search": {
       "tags": ["domain:passenger", "type:feature"]
+    },
+    "shared-auth-lib": {
+      "tags": ["domain:shared", "type:util"]
     }
   },
   "targetDependencies": {

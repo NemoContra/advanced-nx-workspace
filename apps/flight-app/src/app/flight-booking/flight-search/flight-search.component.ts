@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 import { Flight, FlightService } from '@flight-workspace/flight-lib';
 import { Store } from '@ngrx/store';
 import { take } from 'rxjs';
-import { flightsLoaded, updateFlight } from '../+state/flight-booking.actions';
+import { loadFlights, updateFlight } from '../+state/flight-booking.actions';
 import { FlightBookingAppState } from '../+state/flight-booking.reducer';
 import { selectFlightsWithProps } from '../+state/flight-booking.selectors';
 
@@ -35,14 +35,13 @@ export class FlightSearchComponent {
 
   search(): void {
     if (!this.from || !this.to) return;
-    this.flightService.find(this.from, this.to, this.urgent).subscribe({
-      next: (flights) => {
-        this.store.dispatch(flightsLoaded({ flights }));
-      },
-      error: (error) => {
-        console.error('error', error);
-      },
-    });
+    this.store.dispatch(
+      loadFlights({
+        from: this.from,
+        to: this.to,
+        urgent: this.urgent,
+      })
+    );
   }
 
   delay(): void {

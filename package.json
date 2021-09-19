@@ -68,6 +68,7 @@
     "@angular/cli": "12.1.4",
     "@angular/compiler-cli": "12.1.0",
     "@angular/language-service": "12.1.0",
+    "@ngneat/spectator": "^8.0.4",
     "@ngrx/schematics": "12.2.0",
     "@ngrx/store-devtools": "12.2.0",
     "@nrwl/cli": "12.6.5",

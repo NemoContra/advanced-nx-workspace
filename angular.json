@@ -972,6 +972,31 @@
         }
       }
     },
+    "shared-ui-animal-sound-button": {
+      "projectType": "library",
+      "root": "libs/shared/ui/animal-sound-button",
+      "sourceRoot": "libs/shared/ui/animal-sound-button/src",
+      "prefix": "flight-workspace",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui/animal-sound-button"],
+          "options": {
+            "jestConfig": "libs/shared/ui/animal-sound-button/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/animal-sound-button/src/**/*.ts",
+              "libs/shared/ui/animal-sound-button/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shared-util-random-animal-image": {
       "projectType": "library",
       "root": "libs/shared/util/random-animal-image",

@@ -14,10 +14,13 @@ import { SharedUtilRandomAnimalImageService } from './shared-util-random-animal-
   />`,
 })
 export class SharedUtilRandomAnimalImageComponent {
-  img$: Observable<AnimalImage> =
-    this.sharedUtilRandomAnimalImageService.getAnimalImage();
+  img$: Observable<AnimalImage> = this.getAnimalImage();
 
   constructor(
     private sharedUtilRandomAnimalImageService: SharedUtilRandomAnimalImageService
   ) {}
+
+  getAnimalImage(): Observable<AnimalImage> {
+    return this.sharedUtilRandomAnimalImageService.getAnimalImage();
+  }
 }

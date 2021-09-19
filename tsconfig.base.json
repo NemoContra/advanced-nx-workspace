@@ -27,6 +27,9 @@
       "@flight-workspace/passenger/feature-search": [
         "libs/passenger/feature-search/src/index.ts"
       ],
+      "@flight-workspace/shared/ui/animal-sound-button": [
+        "libs/shared/ui/animal-sound-button/src/index.ts"
+      ],
       "@flight-workspace/shared/util/random-animal-image": [
         "libs/shared/util/random-animal-image/src/index.ts"
       ]

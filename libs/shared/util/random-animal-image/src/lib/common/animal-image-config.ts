@@ -1,8 +1,8 @@
 import { InjectionToken } from '@angular/core';
 
 export interface AnimalImageConfig {
-  cats?: boolean;
-  dogs?: boolean;
+  cats: boolean;
+  dogs: boolean;
 }
 
 export const defaultAnimalImageConfig: AnimalImageConfig = {

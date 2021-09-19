@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DogComponent should render 1`] = `
+<flight-workspace-dog
+  __ngContext__={[Function LRootView]}
+>
+  <p>
+    Only dogs here
+  </p><flight-workspace-shared-util-random-animal-image /><br /><button
+    flightworkspaceshareduianimalsoundbutton="dog"
+  >
+    Make sound
+  </button>
+</flight-workspace-dog>
+`;

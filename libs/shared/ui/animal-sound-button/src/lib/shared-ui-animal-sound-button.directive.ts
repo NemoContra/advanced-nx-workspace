@@ -17,7 +17,7 @@ type AnimalType = 'dog' | 'cat';
 export class SharedUiAnimalSoundButtonDirective implements OnInit, OnDestroy {
   @Input() flightWorkspaceSharedUiAnimalSoundButton?: AnimalType;
 
-  @HostBinding('title') title = 'I make animal sounds!';
+  @HostBinding() title = 'I make animal sounds!';
 
   private play$$ = new Subject<AnimalType>();
   private animalSoundMap: Record<AnimalType, string> = {

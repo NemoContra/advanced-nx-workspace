@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SharedUtilRandomAnimalImageModule call forChild with {"cats":false,"dogs":false} should register: config 1`] = `
+Object {
+  "cats": false,
+  "dogs": false,
+}
+`;
+
+exports[`SharedUtilRandomAnimalImageModule call forChild with {"cats":false,"dogs":false} should register: configFactory 1`] = `[MockFunction]`;
+
+exports[`SharedUtilRandomAnimalImageModule call forChild with {"cats":false,"dogs":true} should register: config 1`] = `
+Object {
+  "cats": false,
+  "dogs": true,
+}
+`;
+
+exports[`SharedUtilRandomAnimalImageModule call forChild with {"cats":false,"dogs":true} should register: configFactory 1`] = `[MockFunction]`;
+
+exports[`SharedUtilRandomAnimalImageModule call forChild with {"cats":true,"dogs":false} should register: config 1`] = `
+Object {
+  "cats": true,
+  "dogs": false,
+}
+`;
+
+exports[`SharedUtilRandomAnimalImageModule call forChild with {"cats":true,"dogs":false} should register: configFactory 1`] = `[MockFunction]`;
+
+exports[`SharedUtilRandomAnimalImageModule call forChild with {"cats":true,"dogs":true} should register: config 1`] = `
+Object {
+  "cats": true,
+  "dogs": true,
+}
+`;
+
+exports[`SharedUtilRandomAnimalImageModule call forChild with {"cats":true,"dogs":true} should register: configFactory 1`] = `[MockFunction]`;
+
+exports[`SharedUtilRandomAnimalImageModule call forRoot with {"cats":false,"dogs":false} should register: config 1`] = `
+Object {
+  "cats": false,
+  "dogs": false,
+}
+`;
+
+exports[`SharedUtilRandomAnimalImageModule call forRoot with {"cats":false,"dogs":false} should register: configFactory 1`] = `[MockFunction]`;
+
+exports[`SharedUtilRandomAnimalImageModule call forRoot with {"cats":false,"dogs":true} should register: config 1`] = `
+Object {
+  "cats": false,
+  "dogs": true,
+}
+`;
+
+exports[`SharedUtilRandomAnimalImageModule call forRoot with {"cats":false,"dogs":true} should register: configFactory 1`] = `[MockFunction]`;
+
+exports[`SharedUtilRandomAnimalImageModule call forRoot with {"cats":true,"dogs":false} should register: config 1`] = `
+Object {
+  "cats": true,
+  "dogs": false,
+}
+`;
+
+exports[`SharedUtilRandomAnimalImageModule call forRoot with {"cats":true,"dogs":false} should register: configFactory 1`] = `[MockFunction]`;
+
+exports[`SharedUtilRandomAnimalImageModule call forRoot with {"cats":true,"dogs":true} should register: config 1`] = `
+Object {
+  "cats": true,
+  "dogs": true,
+}
+`;
+
+exports[`SharedUtilRandomAnimalImageModule call forRoot with {"cats":true,"dogs":true} should register: configFactory 1`] = `[MockFunction]`;
+
+exports[`SharedUtilRandomAnimalImageModule configFactory 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "cats": true,
+        "dogs": true,
+      },
+    ],
+    Array [
+      Object {
+        "cats": true,
+        "dogs": false,
+      },
+    ],
+    Array [
+      Object {
+        "cats": false,
+        "dogs": true,
+      },
+    ],
+    Array [
+      Object {
+        "cats": false,
+        "dogs": false,
+      },
+    ],
+    Array [
+      Object {
+        "cats": true,
+        "dogs": true,
+      },
+    ],
+    Array [
+      Object {
+        "cats": true,
+        "dogs": false,
+      },
+    ],
+    Array [
+      Object {
+        "cats": false,
+        "dogs": true,
+      },
+    ],
+    Array [
+      Object {
+        "cats": false,
+        "dogs": false,
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": [Function],
+    },
+    Object {
+      "type": "return",
+      "value": [Function],
+    },
+    Object {
+      "type": "return",
+      "value": [Function],
+    },
+    Object {
+      "type": "return",
+      "value": [Function],
+    },
+    Object {
+      "type": "return",
+      "value": [Function],
+    },
+    Object {
+      "type": "return",
+      "value": [Function],
+    },
+    Object {
+      "type": "return",
+      "value": [Function],
+    },
+    Object {
+      "type": "return",
+      "value": [Function],
+    },
+  ],
+}
+`;

@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { map, NEVER, Observable } from 'rxjs';
 import { AnimalImage, CatImage, DogImage } from './common/animal-image';
 import { HttpClient } from '@angular/common/http';
 import { getRandomEntry } from './common/random-from-array';
@@ -10,6 +10,11 @@ import {
 
 @Injectable()
 export class SharedUtilRandomAnimalImageService {
+  private imageFactories: (() => Observable<AnimalImage>)[] = [
+    ...(this.animalImageConfig.cats ? [this.getCatImage.bind(this)] : []),
+    ...(this.animalImageConfig.dogs ? [this.getDogImage.bind(this)] : []),
+  ];
+
   constructor(
     private httpClient: HttpClient,
     @Inject(ANIMAL_IMAGE_CONFIG) private animalImageConfig: AnimalImageConfig
@@ -21,22 +26,18 @@ export class SharedUtilRandomAnimalImageService {
   }
 
   getAnimalImage(): Observable<AnimalImage> {
-    return this.getRandomAnimalImage(
-      this.animalImageConfig.cats,
-      this.animalImageConfig.dogs
-    );
+    return getRandomEntry(this.imageFactories)?.() ?? NEVER;
   }
 
-  private getRandomAnimalImage(
-    enableCats: boolean,
-    enableDogs: boolean
-  ): Observable<AnimalImage> {
-    const imageFactories: Observable<AnimalImage>[] = [
-      ...(enableCats ? [this.getCatImage()] : []),
-      ...(enableDogs ? [this.getDogImage()] : []),
-    ];
-
-    return getRandomEntry(imageFactories);
+  private getCatImage(): Observable<AnimalImage> {
+    return this.httpClient.get<CatImage>('https://aws.random.cat/meow').pipe(
+      map(
+        ({ file }: CatImage): AnimalImage => ({
+          src: file,
+          alt: 'A cat',
+        })
+      )
+    );
   }
 
   private getDogImage(): Observable<AnimalImage> {
@@ -44,24 +45,11 @@ export class SharedUtilRandomAnimalImageService {
       .get<DogImage>('https://dog.ceo/api/breeds/image/random')
       .pipe(
         map(
-          ({ message }) =>
-            ({
-              src: message,
-              alt: 'A Dog',
-            } as AnimalImage)
+          ({ message }: DogImage): AnimalImage => ({
+            src: message,
+            alt: 'A Dog',
+          })
         )
       );
-  }
-
-  private getCatImage(): Observable<AnimalImage> {
-    return this.httpClient.get<CatImage>('https://aws.random.cat/meow').pipe(
-      map(
-        ({ file }) =>
-          ({
-            src: file,
-            alt: 'A cat',
-          } as AnimalImage)
-      )
-    );
   }
 }

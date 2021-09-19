@@ -1,0 +1,214 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SharedUtilRandomAnimalImageService With config cats: false and dogs: false: spyObserver 1`] = `
+Object {
+  "complete": [MockFunction complete],
+  "error": [MockFunction error],
+  "next": [MockFunction next],
+}
+`;
+
+exports[`SharedUtilRandomAnimalImageService With config cats: false and dogs: true should get the result successfully: spyObserver 1`] = `
+Object {
+  "complete": [MockFunction complete] {
+    "calls": Array [
+      Array [],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "error": [MockFunction error],
+  "next": [MockFunction next] {
+    "calls": Array [
+      Array [
+        Object {
+          "alt": "A Dog",
+          "src": "https://dog.de/test.png",
+        },
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+}
+`;
+
+exports[`SharedUtilRandomAnimalImageService With config cats: false and dogs: true should throw an error: spyObserver 1`] = `
+Object {
+  "complete": [MockFunction complete],
+  "error": [MockFunction error] {
+    "calls": Array [
+      Array [
+        HttpErrorResponse {
+          "error": Object {
+            "message": "https://dog.de/test.png",
+            "status": "success",
+          },
+          "headers": HttpHeaders {
+            "headers": Map {},
+            "lazyUpdate": null,
+            "normalizedNames": Map {},
+          },
+          "message": "Http failure response for https://dog.ceo/api/breeds/image/random: 500 Internal Server Error",
+          "name": "HttpErrorResponse",
+          "ok": false,
+          "status": 500,
+          "statusText": "Internal Server Error",
+          "url": "https://dog.ceo/api/breeds/image/random",
+        },
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "next": [MockFunction next],
+}
+`;
+
+exports[`SharedUtilRandomAnimalImageService With config cats: true and dogs: false should get the result successfully: spyObserver 1`] = `
+Object {
+  "complete": [MockFunction complete] {
+    "calls": Array [
+      Array [],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "error": [MockFunction error],
+  "next": [MockFunction next] {
+    "calls": Array [
+      Array [
+        Object {
+          "alt": "A cat",
+          "src": "https://cat.de/test.png",
+        },
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+}
+`;
+
+exports[`SharedUtilRandomAnimalImageService With config cats: true and dogs: false should throw an error: spyObserver 1`] = `
+Object {
+  "complete": [MockFunction complete],
+  "error": [MockFunction error] {
+    "calls": Array [
+      Array [
+        HttpErrorResponse {
+          "error": Object {
+            "file": "https://cat.de/test.png",
+          },
+          "headers": HttpHeaders {
+            "headers": Map {},
+            "lazyUpdate": null,
+            "normalizedNames": Map {},
+          },
+          "message": "Http failure response for https://aws.random.cat/meow: 500 Internal Server Error",
+          "name": "HttpErrorResponse",
+          "ok": false,
+          "status": 500,
+          "statusText": "Internal Server Error",
+          "url": "https://aws.random.cat/meow",
+        },
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "next": [MockFunction next],
+}
+`;
+
+exports[`SharedUtilRandomAnimalImageService With config cats: true and dogs: true should get the result successfully: spyObserver 1`] = `
+Object {
+  "complete": [MockFunction complete] {
+    "calls": Array [
+      Array [],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "error": [MockFunction error],
+  "next": [MockFunction next] {
+    "calls": Array [
+      Array [
+        Object {
+          "alt": "A cat",
+          "src": "https://cat.de/test.png",
+        },
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+}
+`;
+
+exports[`SharedUtilRandomAnimalImageService With config cats: true and dogs: true should throw an error: spyObserver 1`] = `
+Object {
+  "complete": [MockFunction complete],
+  "error": [MockFunction error] {
+    "calls": Array [
+      Array [
+        HttpErrorResponse {
+          "error": Object {
+            "file": "https://cat.de/test.png",
+          },
+          "headers": HttpHeaders {
+            "headers": Map {},
+            "lazyUpdate": null,
+            "normalizedNames": Map {},
+          },
+          "message": "Http failure response for https://aws.random.cat/meow: 500 Internal Server Error",
+          "name": "HttpErrorResponse",
+          "ok": false,
+          "status": 500,
+          "statusText": "Internal Server Error",
+          "url": "https://aws.random.cat/meow",
+        },
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "next": [MockFunction next],
+}
+`;

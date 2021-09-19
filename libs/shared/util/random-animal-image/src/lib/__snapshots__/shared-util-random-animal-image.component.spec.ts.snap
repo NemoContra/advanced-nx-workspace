@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SharedUtilRandomAnimalImageComponent should render an image with src and alt 1`] = `
+<flight-workspace-shared-util-random-animal-image
+  __ngContext__={[Function LRootView]}
+  img$={[Function Observable]}
+  sharedUtilRandomAnimalImageService={[Function Object]}
+>
+  <img
+    alt="TEST"
+    height="500px"
+    src="http://someimage.com/someimage.png"
+    width="500px"
+  />
+</flight-workspace-shared-util-random-animal-image>
+`;

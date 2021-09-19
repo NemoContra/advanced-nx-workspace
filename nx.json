@@ -43,6 +43,9 @@
     "dashboard-lib": {
       "tags": ["domain:dashboard", "type:domain-logic"]
     },
+    "demo-app": {
+      "tags": []
+    },
     "external": {
       "tags": ["domain:external"]
     },
@@ -85,6 +88,9 @@
     },
     "passenger-feature-search": {
       "tags": ["domain:passenger", "type:feature"]
+    },
+    "shared-util-random-animal-image": {
+      "tags": ["scope:shared", "type:util"]
     }
   },
   "targetDependencies": {

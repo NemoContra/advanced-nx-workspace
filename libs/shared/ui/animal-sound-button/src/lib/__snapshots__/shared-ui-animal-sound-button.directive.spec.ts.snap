@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SharedUiAnimalSoundButtonDirective  cat should play the audio cat_purr_close 1`] = `
+<ng-component
+  __ngContext__={[Function LRootView]}
+  animal={[Function String]}
+>
+  <button
+    title="I make animal sounds!"
+  >
+    Click me!
+  </button>
+</ng-component>
+`;
+
+exports[`SharedUiAnimalSoundButtonDirective  dog should play the audio dog_barking 1`] = `
+<ng-component
+  __ngContext__={[Function LRootView]}
+  animal={[Function String]}
+>
+  <button
+    title="I make animal sounds!"
+  >
+    Click me!
+  </button>
+</ng-component>
+`;

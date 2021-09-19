@@ -7,12 +7,13 @@ import {
   ANIMAL_IMAGE_CONFIG,
   AnimalImageConfig,
 } from './common/animal-image-config';
+import { boundMethod } from 'autobind-decorator';
 
 @Injectable()
 export class SharedUtilRandomAnimalImageService {
   private imageFactories: (() => Observable<AnimalImage>)[] = [
-    ...(this.animalImageConfig.cats ? [this.getCatImage.bind(this)] : []),
-    ...(this.animalImageConfig.dogs ? [this.getDogImage.bind(this)] : []),
+    ...(this.animalImageConfig.cats ? [this.getCatImage] : []),
+    ...(this.animalImageConfig.dogs ? [this.getDogImage] : []),
   ];
 
   constructor(
@@ -29,6 +30,7 @@ export class SharedUtilRandomAnimalImageService {
     return getRandomEntry(this.imageFactories)?.() ?? NEVER;
   }
 
+  @boundMethod
   private getCatImage(): Observable<AnimalImage> {
     return this.httpClient.get<CatImage>('https://aws.random.cat/meow').pipe(
       map(
@@ -40,6 +42,7 @@ export class SharedUtilRandomAnimalImageService {
     );
   }
 
+  @boundMethod
   private getDogImage(): Observable<AnimalImage> {
     return this.httpClient
       .get<DogImage>('https://dog.ceo/api/breeds/image/random')

@@ -7,16 +7,12 @@ Object {
 }
 `;
 
-exports[`SharedUtilRandomAnimalImageModule call forChild with {"cats":false,"dogs":false} should register: configFactory 1`] = `[MockFunction]`;
-
 exports[`SharedUtilRandomAnimalImageModule call forChild with {"cats":false,"dogs":true} should register: config 1`] = `
 Object {
   "cats": false,
   "dogs": true,
 }
 `;
-
-exports[`SharedUtilRandomAnimalImageModule call forChild with {"cats":false,"dogs":true} should register: configFactory 1`] = `[MockFunction]`;
 
 exports[`SharedUtilRandomAnimalImageModule call forChild with {"cats":true,"dogs":false} should register: config 1`] = `
 Object {
@@ -25,16 +21,12 @@ Object {
 }
 `;
 
-exports[`SharedUtilRandomAnimalImageModule call forChild with {"cats":true,"dogs":false} should register: configFactory 1`] = `[MockFunction]`;
-
 exports[`SharedUtilRandomAnimalImageModule call forChild with {"cats":true,"dogs":true} should register: config 1`] = `
 Object {
   "cats": true,
   "dogs": true,
 }
 `;
-
-exports[`SharedUtilRandomAnimalImageModule call forChild with {"cats":true,"dogs":true} should register: configFactory 1`] = `[MockFunction]`;
 
 exports[`SharedUtilRandomAnimalImageModule call forRoot with {"cats":false,"dogs":false} should register: config 1`] = `
 Object {
@@ -43,16 +35,12 @@ Object {
 }
 `;
 
-exports[`SharedUtilRandomAnimalImageModule call forRoot with {"cats":false,"dogs":false} should register: configFactory 1`] = `[MockFunction]`;
-
 exports[`SharedUtilRandomAnimalImageModule call forRoot with {"cats":false,"dogs":true} should register: config 1`] = `
 Object {
   "cats": false,
   "dogs": true,
 }
 `;
-
-exports[`SharedUtilRandomAnimalImageModule call forRoot with {"cats":false,"dogs":true} should register: configFactory 1`] = `[MockFunction]`;
 
 exports[`SharedUtilRandomAnimalImageModule call forRoot with {"cats":true,"dogs":false} should register: config 1`] = `
 Object {
@@ -61,16 +49,12 @@ Object {
 }
 `;
 
-exports[`SharedUtilRandomAnimalImageModule call forRoot with {"cats":true,"dogs":false} should register: configFactory 1`] = `[MockFunction]`;
-
 exports[`SharedUtilRandomAnimalImageModule call forRoot with {"cats":true,"dogs":true} should register: config 1`] = `
 Object {
   "cats": true,
   "dogs": true,
 }
 `;
-
-exports[`SharedUtilRandomAnimalImageModule call forRoot with {"cats":true,"dogs":true} should register: configFactory 1`] = `[MockFunction]`;
 
 exports[`SharedUtilRandomAnimalImageModule configFactory 1`] = `
 [MockFunction] {

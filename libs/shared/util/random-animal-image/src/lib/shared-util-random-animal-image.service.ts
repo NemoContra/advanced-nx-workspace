@@ -47,7 +47,7 @@ export class SharedUtilRandomAnimalImageService {
         map(
           ({ message }: DogImage): AnimalImage => ({
             src: message,
-            alt: 'A Dog',
+            alt: 'A dog',
           })
         )
       );

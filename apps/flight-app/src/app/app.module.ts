@@ -1,19 +1,24 @@
-import { FlightCancellingModule } from './flight-booking/flight-cancelling/flight-cancelling.module';
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
-import { FlightLibModule } from '@flight-workspace/flight-lib';
+import {HttpClientModule} from "@angular/common/http";
+import {NgModule} from "@angular/core";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {BrowserModule} from "@angular/platform-browser";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {RouterModule} from "@angular/router";
+import {FlightLibModule} from "@flight-workspace/flight-lib";
+import {LoggerModule} from "@flight-workspace/logger-lib";
+import {ReactiveComponentModule} from "@ngrx/component";
 
-import { AppComponent } from './app.component';
-import { APP_ROUTES } from './app.routes';
-import { BasketComponent } from './basket/basket.component';
-import { FlightBookingModule } from './flight-booking/flight-booking.module';
-import { HomeComponent } from './home/home.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { SharedModule } from './shared/shared.module';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import {AppComponent} from "./app.component";
+import {APP_ROUTES} from "./app.routes";
+import {BasketComponent} from "./basket/basket.component";
+import {FlightBookingModule} from "./flight-booking/flight-booking.module";
+import {FlightCancellingModule} from "./flight-booking/flight-cancelling/flight-cancelling.module";
+import {FlightLookaheadComponent} from "./flight-lookahead/flight-lookahead.component";
+import {HomeComponent} from "./home/home.component";
+import {NavbarComponent} from "./navbar/navbar.component";
+import {CustomLogFormatterService} from "./shared/logging/custom-log-formatter.service";
+import {SharedModule} from "./shared/shared.module";
+import {SidebarComponent} from "./sidebar/sidebar.component";
 
 @NgModule({
   imports: [
@@ -27,15 +32,24 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     FlightLibModule.forRoot(),
     SharedModule.forRoot(),
     RouterModule.forRoot(APP_ROUTES),
+    LoggerModule.forRoot({
+      enableDebug: true,
+      logFormatterType: CustomLogFormatterService,
+    }),
+    FormsModule,
+    ReactiveFormsModule,
+    ReactiveComponentModule
   ],
   declarations: [
     AppComponent,
     SidebarComponent,
     NavbarComponent,
     HomeComponent,
-    BasketComponent
+    BasketComponent,
+    FlightLookaheadComponent,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+}

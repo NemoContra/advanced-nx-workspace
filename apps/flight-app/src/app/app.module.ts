@@ -1,3 +1,4 @@
+import {FormsModule} from "@angular/forms";
 import { FlightCancellingModule } from './flight-booking/flight-cancelling/flight-cancelling.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,6 +15,8 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SharedModule } from './shared/shared.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { LoggerModule } from '@flight-workspace/logger-lib';
+import { CustomLogFormatterService } from './shared/logging/custom-log-formatter.service';
 
 @NgModule({
   imports: [
@@ -27,15 +30,20 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     FlightLibModule.forRoot(),
     SharedModule.forRoot(),
     RouterModule.forRoot(APP_ROUTES),
+    LoggerModule.forRoot({
+      enableDebug: true,
+      logFormatterType: CustomLogFormatterService,
+    }),
+    FormsModule,
   ],
   declarations: [
     AppComponent,
     SidebarComponent,
     NavbarComponent,
     HomeComponent,
-    BasketComponent
+    BasketComponent,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

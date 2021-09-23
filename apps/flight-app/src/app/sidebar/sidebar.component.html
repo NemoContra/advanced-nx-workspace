@@ -2,7 +2,7 @@
   <div class="logo">
     <a class="simple-text">
       <div class="logo-img">
-        <img alt="" src="../../assets/img/angular2-logo.png" />
+        <img alt="" src="../../assets/img/angular2-logo.png"/>
       </div>
       Flight42
     </a>
@@ -22,10 +22,46 @@
       </a>
     </li>
 
+    <li>
+      <a routerLink="flight-lookahead">
+        <i class="ti-user"></i>
+        <p>Lookahead</p>
+      </a>
+    </li>
+
+
+    <li routerLinkActive="active">
+      <a routerLink="mf-passenger">
+        <i class="ti-user"></i>
+        <p>MF Passenger</p>
+      </a>
+    </li>
+
     <li routerLinkActive="active">
       <a [routerLink]="[{ outlets: { aux: 'basket' } }]">
         <i class="ti-shopping-cart"></i>
         <p>Basket</p>
+      </a>
+    </li>
+
+    <li routerLinkActive="active">
+      <a routerLink="react">
+        <i class="ti-user"></i>
+        <p>MF React</p>
+      </a>
+    </li>
+
+    <li routerLinkActive="active">
+      <a routerLink="angular2">
+        <i class="ti-user"></i>
+        <p>MF Angular #2</p>
+      </a>
+    </li>
+
+    <li routerLinkActive="active">
+      <a routerLink="angular3/a">
+        <i class="ti-user"></i>
+        <p>MF Angular #3</p>
       </a>
     </li>
 

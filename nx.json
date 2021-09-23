@@ -68,10 +68,32 @@
       "tags": ["domain:flights", "type:domain-logic"]
     },
     "logger-lib": {
-      "tags": ["domain:shared"]
+      "tags": ["domain:shared", "type:util"]
+    },
+    "luggage": {
+      "tags": ["domain:apps/luggage", "type:app"]
+    },
+    "luggage-domain": {
+      "tags": ["domain:luggage", "type:domain-logic"]
+    },
+    "luggage-e2e": {
+      "tags": [],
+      "implicitDependencies": ["luggage"]
+    },
+    "luggage-feature-checkin": {
+      "tags": ["domain:luggage", "type:feature"]
+    },
+    "luggage-feature-report-loss": {
+      "tags": ["domain:luggage", "type:feature"]
+    },
+    "luggage-ui-card": {
+      "tags": ["domain:luggage", "type:ui"]
     },
     "passenger": {
       "tags": ["domain:passenger", "type:app"]
+    },
+    "passenger-api": {
+      "tags": []
     },
     "passenger-domain": {
       "tags": ["domain:passenger", "type:domain-logic"]
@@ -85,6 +107,9 @@
     },
     "passenger-feature-search": {
       "tags": ["domain:passenger", "type:feature"]
+    },
+    "shared-auth-lib": {
+      "tags": ["domain:shared", "type:util"]
     }
   },
   "targetDependencies": {

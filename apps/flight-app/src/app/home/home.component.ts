@@ -1,8 +1,10 @@
 /* eslint-disable no-restricted-syntax */
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { AuthService } from '../shared/auth/auth.service';
+import { CanDeactivateComponent } from '../shared/deactivation/can-deactivate.guard';
 
 @Component({
   selector: 'app-home',
@@ -10,16 +12,29 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./home.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, CanDeactivateComponent {
   expertMode = false;
   needsLogin$: Observable<boolean> | undefined;
-  _userName = '';
+  acceptTerms = true;
+  showAcceptTerms = false;
+  username = '';
+  password = '';
+
+  constructor(
+    private route: ActivatedRoute,
+    private authService: AuthService
+  ) {}
 
   get userName(): string {
-    return this._userName;
+    return this.authService.userName;
   }
 
-  constructor(private route: ActivatedRoute) {}
+  canDeactivate(): Observable<boolean> {
+    if (!this.acceptTerms) {
+      this.showAcceptTerms = true;
+    }
+    return of(this.acceptTerms);
+  }
 
   changed($event: CustomEvent): void {
     console.debug('$event.detail ', $event.detail);
@@ -34,10 +49,10 @@ export class HomeComponent implements OnInit {
   }
 
   login(): void {
-    this._userName = 'Login will be implemented in another exercise!';
+    this.authService.login(this.username, this.password);
   }
 
   logout(): void {
-    this._userName = '';
+    this.authService.logout();
   }
 }

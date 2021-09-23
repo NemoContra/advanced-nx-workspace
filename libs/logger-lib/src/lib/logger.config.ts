@@ -1,4 +1,8 @@
-export abstract class LoggerConfig {
+import { LogFormatterService } from './log-formatter.service';
 
-  abstract enableDebug: boolean;
+export type LogFormatterServiceType = new () => LogFormatterService;
+
+export abstract class LoggerConfig {
+  abstract enableDebug = false;
+  abstract logFormatterType?: LogFormatterServiceType;
 }

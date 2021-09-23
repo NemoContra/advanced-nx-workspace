@@ -9,6 +9,7 @@ import { Flight } from '../models/flight';
 })
 export class FlightService {
   flights: Flight[] = [];
+  selectedFlight: Flight | undefined;
   baseUrl = `http://www.angular.at/api`;
   // baseUrl = `http://localhost:3000`;
 

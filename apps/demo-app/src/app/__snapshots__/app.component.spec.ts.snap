@@ -4,7 +4,9 @@ exports[`AppComponent should render 1`] = `
 <flight-workspace-root
   __ngContext__={[Function LRootView]}
 >
-  <ul>
+  <h1>
+    Cats and dogs
+  </h1><ul>
     <li>
       <a
         href="/"
@@ -29,6 +31,9 @@ exports[`AppComponent should render 1`] = `
         Dog
       </a>
     </li>
-  </ul><router-outlet />
+  </ul><flight-workspace-dogname
+    dogname="Fido"
+    greeting="Wuff"
+  /><router-outlet />
 </flight-workspace-root>
 `;

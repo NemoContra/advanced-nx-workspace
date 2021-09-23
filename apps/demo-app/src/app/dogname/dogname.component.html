@@ -1,0 +1,4 @@
+<p *ngIf="dogName; else noDogname">{{ greeting }} I am {{ dogName }}</p>
+<ng-template #noDogname>
+  <p>Please call me by my name!</p>
+</ng-template>

@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DognameComponent dogname should be $dogname with greeting Hey 1`] = `
+<ng-component
+  __ngContext__={[Function LRootView]}
+  dogName="undefined"
+  greeting={[Function String]}
+>
+  <flight-workspace-dogname>
+    <p>
+      Please call me by my name!
+    </p>
+    
+    
+  </flight-workspace-dogname>
+</ng-component>
+`;
+
+exports[`DognameComponent dogname should be $dogname with greeting Raaaaff 1`] = `
+<ng-component
+  __ngContext__={[Function LRootView]}
+  dogName={[Function String]}
+  greeting={[Function String]}
+>
+  <flight-workspace-dogname>
+    <p>
+      Raaaaff I am Luna
+    </p>
+    
+    
+  </flight-workspace-dogname>
+</ng-component>
+`;
+
+exports[`DognameComponent dogname should be $dogname with greeting Wuff wuff 1`] = `
+<ng-component
+  __ngContext__={[Function LRootView]}
+  dogName={[Function String]}
+  greeting={[Function String]}
+>
+  <flight-workspace-dogname>
+    <p>
+      Wuff wuff I am Fido
+    </p>
+    
+    
+  </flight-workspace-dogname>
+</ng-component>
+`;
+
+exports[`DognameComponent dogname should be $dogname with greeting null 1`] = `
+<ng-component
+  __ngContext__={[Function LRootView]}
+  dogName="null"
+  greeting="null"
+>
+  <flight-workspace-dogname>
+    <p>
+      Please call me by my name!
+    </p>
+    
+    
+  </flight-workspace-dogname>
+</ng-component>
+`;
+
+exports[`DognameComponent dogname should be $dogname with greeting undefined 1`] = `
+<ng-component
+  __ngContext__={[Function LRootView]}
+  dogName={[Function String]}
+  greeting="undefined"
+>
+  <flight-workspace-dogname>
+    <p>
+       I am Bello
+    </p>
+    
+    
+  </flight-workspace-dogname>
+</ng-component>
+`;

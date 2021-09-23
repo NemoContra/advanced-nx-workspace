@@ -4,9 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { SharedUtilRandomAnimalImageModule } from '@flight-workspace/shared/util/random-animal-image';
 import { RouterModule } from '@angular/router';
+import { DognameComponent } from './dogname/dogname.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, DognameComponent],
   imports: [
     BrowserModule,
     SharedUtilRandomAnimalImageModule.forRoot({ cats: true, dogs: true }),
